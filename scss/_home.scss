@@ -1,0 +1,33 @@
+@mixin getImageBackground {
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url("../img/model-1.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+
+@mixin getElementCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home {
+  @include getElementCenter();
+  @include getImageBackground();
+
+  &__name {
+    font-weight: 700;
+    font-size: 3rem;
+    border-bottom: 2px solid set-color($primary-color);
+    border-width: thin;
+    &--last {
+      color: $secondary-color;
+    }
+  }
+}

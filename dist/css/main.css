@@ -1,0 +1,473 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg");
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+
+.home__name {
+  font-weight: 700;
+  font-size: 3rem;
+  border-bottom: 2px solid #fff;
+  border-width: thin;
+}
+
+.home__name--last {
+  color: orange;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #272727;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1,
+h2,
+.about .jobs_item h3,
+h3 {
+  font-weight: 400;
+}
+
+.nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.menu-btn {
+  width: 50px;
+  height: 50px;
+  top: 1rem;
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.menu-btn__burger {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 20px;
+  height: 2px;
+  z-index: 10;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  width: 12px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -0.5rem;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger.open {
+  background: transparent;
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+}
+
+.menu-btn__burger.open::after {
+  background-color: green;
+  width: 20px;
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.menu-btn__burger.open::before {
+  background-color: red;
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.home .social-icons {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.home .social-icons a {
+  padding: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.home .social-icons a:hover {
+  color: orange;
+}
+
+.nav {
+  width: 100vw;
+  height: 0vh;
+  position: fixed;
+  top: 0px;
+  z-index: 9;
+  background-color: rgba(39, 39, 39, 0.9);
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav.open {
+  height: 100vh;
+}
+
+.nav-menu {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  list-style: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-menu__item {
+  padding: 10px;
+  font-size: 25px;
+  -webkit-transform: translate3d(650px, 0, 0);
+          transform: translate3d(650px, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-menu__item.open {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+footer {
+  color: #fff;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.nav-menu__item:nth-child(1) {
+  -webkit-transition-delay: 0.1s !important;
+          transition-delay: 0.1s !important;
+}
+
+.nav-menu__item:nth-child(2) {
+  -webkit-transition-delay: 0.2s !important;
+          transition-delay: 0.2s !important;
+}
+
+.nav-menu__item:nth-child(3) {
+  -webkit-transition-delay: 0.3s !important;
+          transition-delay: 0.3s !important;
+}
+
+.nav-menu__item:nth-child(4) {
+  -webkit-transition-delay: 0.4s !important;
+          transition-delay: 0.4s !important;
+}
+
+.nav-menu__item:nth-child(5) {
+  -webkit-transition-delay: 0.5s !important;
+          transition-delay: 0.5s !important;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.about .bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg");
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+
+.about .bio-content {
+  width: 80%;
+}
+
+.about .bio-content h2, .about .bio-content .jobs_item h3, .about .jobs_item .bio-content h3 {
+  text-align: center;
+  padding: 0px 10px;
+}
+
+.about .bio-content p {
+  font-size: small;
+  text-align: justify;
+  padding: 10px;
+  color: #dadada;
+}
+
+.about .jobs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.about .jobs_item {
+  width: 80%;
+  background: #414141;
+  border-bottom: 2px solid orange;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.about .jobs_item img {
+  width: 100%;
+  height: auto;
+}
+
+.about .jobs_item .overlay {
+  position: absolute;
+  background-color: orange;
+  bottom: 0px;
+  left: 0px;
+  height: 0%;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+
+.about .jobs_item .overlay button {
+  background-color: lightblue;
+  color: lightcoral;
+  width: 48%;
+  padding: 5px 0px;
+  outline: none;
+  border: none;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 1%;
+}
+
+.about .jobs_item:hover .overlay {
+  height: 100%;
+}
+
+.about .jobs_item h2, .about .jobs_item h3 {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  color: orange;
+}
+
+.about .jobs_item h3 {
+  padding: 10px;
+  color: white;
+  font-size: small;
+}
+
+.about .jobs_item h4 {
+  padding-bottom: 10px;
+  color: #747474;
+  padding-left: 10px;
+}
+
+.about .jobs_item p {
+  color: lightblue;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.about .social-icons {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.about .social-icons a {
+  padding: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.about .social-icons a:hover {
+  color: orange;
+}
+
+.about .social-icons {
+  left: 0px;
+  bottom: 0px;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: rotate(-90deg) translate(10px, 30px);
+          transform: rotate(-90deg) translate(10px, 30px);
+}
+
+.footer {
+  right: 0px;
+  bottom: 30px;
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+  -webkit-transform: rotate(90deg) translate(20px, 20px);
+          transform: rotate(90deg) translate(20px, 20px);
+}
+
+.contact-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg");
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+
+.contact-page h1 {
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.contact-page .contact-details {
+  width: 80%;
+}
+
+.contact-page .contact-details .email,
+.contact-page .contact-details .phone,
+.contact-page .contact-details .address {
+  padding: 10px 30px;
+  border: 2px solid orange;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-page .contact-details .email:hover,
+.contact-page .contact-details .phone:hover,
+.contact-page .contact-details .address:hover {
+  padding: 7px 20px;
+  background-color: #272727;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+.contact-page .contact-details .email h2, .contact-page .contact-details .email .about .jobs_item h3, .about .jobs_item .contact-page .contact-details .email h3,
+.contact-page .contact-details .phone h2,
+.contact-page .contact-details .phone .about .jobs_item h3,
+.about .jobs_item .contact-page .contact-details .phone h3,
+.contact-page .contact-details .address h2,
+.contact-page .contact-details .address .about .jobs_item h3,
+.about .jobs_item .contact-page .contact-details .address h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-bottom: 5px;
+  color: orange;
+}
+
+.contact-page .social-icons {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.contact-page .social-icons a {
+  padding: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-page .social-icons a:hover {
+  color: orange;
+}

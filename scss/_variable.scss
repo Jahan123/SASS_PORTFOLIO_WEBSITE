@@ -1,0 +1,41 @@
+$primary_color: #272727;
+$secondary-color: orange;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@mixin getTransition {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin getHover {
+  &:hover {
+    background-color: green !important;
+  }
+}
+
+@mixin getIcons {
+  .social-icons {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    a {
+      padding: 5px;
+      @include getTransition;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@function set-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
